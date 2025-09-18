@@ -24,7 +24,7 @@ It fundamentally changed how I evaluate **technical feasibility vs. commercial i
 
 ---
 
-## 🧱 System Architecture
+##  System Architecture
 
 ```text
 Mobile (React Native)
@@ -57,13 +57,13 @@ Database (MongoDB / Mongoose)
 
 ---
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint                          | Description                                      | Auth |
 |--------|-----------------------------------|--------------------------------------------------|------|
 | POST   | `/auth/register`                  | Create a new user account                        | No   |
 | POST   | `/auth/login`                     | Login and receive JWT                            | No   |
-| GET    | `/auth/user                       | Get current user profile                         | Yes  |
+| GET    | `/auth/user`                      | Get current user profile                         | Yes  |
 | GET    | `/stores/:slug/products`          | List products by store (filters, pagination)     | No   |
 | GET    | `/products/:id`                   | Get product details                              | No   |
 | POST   | `/orders/checkout`                | Create `PENDING` order + Stripe PaymentIntent    | Yes  |
