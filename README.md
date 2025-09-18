@@ -7,6 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
+<img width="157" height="330" alt="image" src="https://github.com/user-attachments/assets/7cdf47ed-2f48-4fe1-a49b-f68cad1f7ffb" />
 
 ## 🚀 Overview
 
