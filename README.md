@@ -1,2 +1,50 @@
-# Online-Shopping-System
-React Native、Stripe、MongoDB 當時我對電商產業的成長潛力非常看好，也曾考慮投入，因此著手開發一套線上購物系統，設計一個具擴展性與商業性的購物平台。 雖然專案原型並未進一步推向市場，但讓我認知從創業角度出發思考系統架構與從工程角度確保技術落地的差異，讓我在之後面對任何專案的設計時，都能仔細評估技術可行性與商業價值。
+# 🛒 Online Shopping System (Clone Prototype)
+
+[![React Native](https://img.shields.io/badge/React%20Native-0.73-blue?logo=react)](https://reactnative.dev/) 
+[![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)](https://nodejs.org/) 
+[![MongoDB](https://img.shields.io/badge/MongoDB-6.0-brightgreen?logo=mongodb)](https://www.mongodb.com/) 
+[![Stripe](https://img.shields.io/badge/Stripe-Payments-blueviolet?logo=stripe)](https://stripe.com/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
+## 🚀 Overview
+
+This repository is a **clone prototype** of a modern **e-commerce system**, built with **React Native, Node.js/Express, MongoDB, and Stripe**.  
+It simulates the core workflow of a real-world online shopping platform:  
+
+**Browse → Cart → Checkout → Payment → Order Tracking**
+
+⚡ The prototype was **not launched commercially**, but served as a **hands-on exploration** of bridging **business-driven system design** with **technical implementation**.  
+At the time, I was fascinated by the explosive growth of e-commerce and wanted to practice designing a scalable shopping platform from scratch.  
+
+👉 This project forced me to think **like an entrepreneur** (system scalability, business value) while building **like an engineer** (robust APIs, payment consistency, data security).  
+It fundamentally changed how I evaluate **technical feasibility vs. commercial impact** in all my future projects.  
+
+---
+
+## 🧱 Architecture
+
+```text
+Mobile (React Native)
+ ├─ UI / Navigation (Stack, Tab)
+ ├─ State Management (Zustand/Redux)
+ ├─ Local Storage (AsyncStorage)
+ ├─ API Client (Axios + JWT Interceptors)
+ └─ Stripe SDK (Card, Apple Pay, Google Pay)
+              │
+              ▼
+Backend (Node.js / Express)
+ ├─ Auth      – JWT / bcrypt
+ ├─ Products  – Query, Categories, Pagination
+ ├─ Orders    – Create, Track, Status Machine
+ ├─ Payments  – Stripe PaymentIntent + Webhook
+ ├─ Admin     – Product & Stock Management
+ └─ Validation– Zod/Joi, Rate Limit, CORS
+              │
+              ▼
+Database (MongoDB / Mongoose)
+ ├─ users     – Accounts, Addresses, Roles
+ ├─ products  – Prices, Inventory, Categories
+ ├─ orders    – Items, Amount, Status
+ └─ payments  – PaymentIntent logs (optional)
