@@ -48,6 +48,7 @@ Backend (Node.js / Express)
 Database (MongoDB / Mongoose)
  ├─ stores    – Store accounts, owners, contact info
  ├─ users     – Accounts, roles, store affiliation, addresses, contact info
- ├─ products  – Prices, stock, categories, per-merchant isolation
- ├─ orders    – Items, amount, status, merchantId reference
+ ├─ products  – Prices, stock, categories, per-store isolation
+ ├─ orders    – Items, amount, status, storeId reference
  └─ payments  – PaymentIntent logs (optional)
+```
