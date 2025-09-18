@@ -52,3 +52,33 @@ Database (MongoDB / Mongoose)
  ├─ orders    – Items, amount, status, storeId reference
  └─ payments  – PaymentIntent logs (optional)
 ```
+
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint                          | Description                                      | Auth |
+|--------|-----------------------------------|--------------------------------------------------|------|
+| POST   | `/auth/register`                  | Create a new user account                        | No   |
+| POST   | `/auth/login`                     | Login and receive JWT                            | No   |
+| GET    | `/auth/user                       | Get current user profile                         | Yes  |
+| GET    | `/stores/:slug/products`          | List products by store (filters, pagination)     | No   |
+| GET    | `/products/:id`                   | Get product details                              | No   |
+| POST   | `/orders/checkout`                | Create `PENDING` order + Stripe PaymentIntent    | Yes  |
+| GET    | `/orders/:id`                     | Fetch single order details                       | Yes  |
+| GET    | `/orders`                         | List user’s orders                               | Yes  |
+| POST   | `/webhook/stripe`                 | Stripe webhook callback (signature verification) | Yes  |
+| POST   | `/admin/stores/:id/products`      | Create new product (store-admin only)            | Yes  |
+| PATCH  | `/admin/stores/:id/products/:pid` | Update product details (store-admin only)        | Yes  |
+| GET    | `/admin/stores/:id/orders`        | List all orders for a store (store-admin only)   | Yes  |
+
+---
+
+##  Getting Started
+
+### Requirements
+- Node.js 18+
+- Yarn or npm
+- MongoDB (local or Atlas)
+- Stripe account & API keys
