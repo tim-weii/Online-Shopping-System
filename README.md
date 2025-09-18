@@ -8,6 +8,7 @@
 
 ---
 <img width="157" height="330" alt="image" src="https://github.com/user-attachments/assets/7cdf47ed-2f48-4fe1-a49b-f68cad1f7ffb" />
+<img width="803" height="388" alt="image" src="https://github.com/user-attachments/assets/90de37e6-87d3-4247-83f2-dcee47f73190" />
 
 ## 🚀 Overview
 
