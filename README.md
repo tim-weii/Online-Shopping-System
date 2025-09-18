@@ -10,41 +10,44 @@
 
 ## 🚀 Overview
 
-This repository is a **clone prototype** of a modern **e-commerce system**, built with **React Native, Node.js/Express, MongoDB, and Stripe**.  
-It simulates the core workflow of a real-world online shopping platform:  
+This repository is a modern **e-commerce system clone prototype**, built with **React Native, Node.js/Express, MongoDB, and Stripe**.  
+It simulates the core workflow of a real-world shopping platform:  
 
 **Browse → Cart → Checkout → Payment → Order Tracking**
 
-⚡ The prototype was **not launched commercially**, but served as a **hands-on exploration** of bridging **business-driven system design** with **technical implementation**.  
-At the time, I was fascinated by the explosive growth of e-commerce and wanted to practice designing a scalable shopping platform from scratch.  
+This project was **not launched commercially**, but served as a **hands-on exercise** to bridge **business-driven system design** and **technical implementation**.  
+At the time, I was fascinated by the rapid growth of the e-commerce industry and wanted to practice designing a scalable platform from scratch.  
 
-👉 This project forced me to think **like an entrepreneur** (system scalability, business value) while building **like an engineer** (robust APIs, payment consistency, data security).  
-It fundamentally changed how I evaluate **technical feasibility vs. commercial impact** in all my future projects.  
+👉 It pushed me to think like an **entrepreneur** (system scalability, business value) while building like an **engineer** (robust APIs, payment consistency, data security).  
+It fundamentally changed how I evaluate **technical feasibility vs. commercial impact** in future projects.  
 
 ---
 
-## 🧱 Architecture
+## 🧱 System Architecture
 
 ```text
 Mobile (React Native)
  ├─ UI / Navigation (Stack, Tab)
- ├─ State Management (Zustand/Redux)
+ ├─ State Management (Zustand)
  ├─ Local Storage (AsyncStorage)
- ├─ API Client (Axios + JWT Interceptors)
+ ├─ API Client (Axios)
  └─ Stripe SDK (Card, Apple Pay, Google Pay)
               │
               ▼
 Backend (Node.js / Express)
- ├─ Auth      – JWT / bcrypt
- ├─ Products  – Query, Categories, Pagination
- ├─ Orders    – Create, Track, Status Machine
- ├─ Payments  – Stripe PaymentIntent + Webhook
- ├─ Admin     – Product & Stock Management
- └─ Validation– Zod/Joi, Rate Limit, CORS
+ ├─ Auth            – JWT / bcrypt
+ ├─ Products        – Query, Categories, Pagination
+ ├─ Orders          – Create, Track, Status Machine
+ ├─ Payments        – Stripe PaymentIntent + Webhook
+ ├─ Admin           – Product & Inventory Management
+ ├─ Validation      – Zod/Joi, Authentication, Authorization, Business Rules,
+ │                    CORS, Rate Limiting, Webhook Signature Verification
+ └─ Observability   – Logs / Metrics / Alerts
               │
               ▼
 Database (MongoDB / Mongoose)
- ├─ users     – Accounts, Addresses, Roles
- ├─ products  – Prices, Inventory, Categories
- ├─ orders    – Items, Amount, Status
+ ├─ stores    – Store accounts, owners, contact info
+ ├─ users     – Accounts, roles, store affiliation, addresses, contact info
+ ├─ products  – Prices, stock, categories, per-merchant isolation
+ ├─ orders    – Items, amount, status, merchantId reference
  └─ payments  – PaymentIntent logs (optional)
